@@ -18,15 +18,6 @@ class Header extends Component {
        <li>
        <Link to="/Products">Products</Link>
       </li>
-       <li>
-      <a href="#">Sell</a>
-      </li>
-       <li>
-      <a href="#">Services</a>
-      </li>
-       <li className="last">
-      <a href="#">Agents</a>
-      </li>
       </ul>
       </nav>
      </header>
