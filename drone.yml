@@ -1,15 +1,11 @@
 kind: pipeline
-name: app
-
-trigger:
-  event:
-  - push
-  branch:
-  - master
-
+name: default
 steps:
-- name: REACT-PROJECT
-  image: react-simple
-    tags:
-      - '${DRONE_COMMIT_SHA:0:8}'
-    Dockerfile: .Dockerfile
+  - name: test
+    image: react-simple
+    commands:
+      - npm install
+      - npm run test
+    when:
+      event:
+        - push
