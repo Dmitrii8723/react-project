@@ -1,33 +1,9 @@
 kind: pipeline
 name: default
-workspace:
-  
-base: /
-  
-path: https://github.com/Dmitrii8723/react-project
+
 steps:
-  - 
-name: test
-    
-image: react-simple
-    
-commands:
-      - go get
-      - go test
-  - name: build
-    
-image: golang
-    
-commands:
-      - go get
-      - go build -o output
-      - chmod +x output
-  - name: run
-    
-image: golang
-    
-commands:
-      - go get
-      - go build -o output
-      - chmod +x output
-      - ./output
+- name: frontend
+  image: react-simple
+  commands:
+  - npm ci
+  - npm run test:unit
