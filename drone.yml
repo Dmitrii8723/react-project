@@ -7,6 +7,7 @@ trigger:
   branch:
   - master
 
-  steps:
+- name: deploy-config-enoah
   image: react-simple
-    Dockerfile: .Dockerfile
+  when:
+    branch: master
