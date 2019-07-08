@@ -1,9 +1,4 @@
-kind: pipeline
-name: default
-
-steps:
-- name: frontend
-  image: node
-  commands:
-  - npm ci
-  - npm run test:unit
+pipeline:
+  build:
+    image: react-simple
+    commands: npm install
