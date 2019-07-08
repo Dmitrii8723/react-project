@@ -2,7 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: reactsimple
+- name: frontend
   image: node
   commands:
   - npm ci
