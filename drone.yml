@@ -1,13 +1,33 @@
 kind: pipeline
-name: api
-
-trigger:
-  event:
-  - push
-  branch:
-  - master
-
-- name: deploy-config-enoah
-  image: react-simple
-  when:
-    branch: master
+name: default
+workspace:
+  
+base: /
+  
+path: https://github.com/Dmitrii8723/react-project
+steps:
+  - 
+name: test
+    
+image: react-simple
+    
+commands:
+      - go get
+      - go test
+  - name: build
+    
+image: golang
+    
+commands:
+      - go get
+      - go build -o output
+      - chmod +x output
+  - name: run
+    
+image: golang
+    
+commands:
+      - go get
+      - go build -o output
+      - chmod +x output
+      - ./output
