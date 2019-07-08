@@ -1,11 +1,13 @@
 kind: pipeline
 name: default
 steps:
-  - name: test
+ - name: build-docker-image
     image: react-simple
+    err_ignore: true
     commands:
-      - npm install
-      - npm run test
+      - docker build -t react-simple .
     when:
       event:
         - push
+      branch:
+        - master
