@@ -1,4 +1,15 @@
-pipeline:
-  build:
-    image: react-simple
-    commands: npm install
+kind: pipeline
+name: app
+
+trigger:
+  event:
+  - push
+  branch:
+  - master
+
+steps:
+- name: REACT-PROJECT
+  image: react-simple
+    tags:
+      - '${DRONE_COMMIT_SHA:0:8}'
+    Dockerfile: .Dockerfile
