@@ -1,0 +1,11 @@
+trigger:
+  event:
+  - push
+  branch:
+  - master
+pipeline:
+  build:
+    image: react-simple
+  commands:
+    - go build
+    - go test
