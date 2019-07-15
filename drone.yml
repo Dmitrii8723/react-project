@@ -1,13 +1,10 @@
 kind: pipeline
 name: default
+
 steps:
-  - name: test
-    image: react-simple
-    commands:
-      - npm install
-      - npm run test
-    when:
-      
-      event:
-        - push
-        - pull_request
+
+- name: frontend
+  image: react-simple
+  commands:
+  - npm install
+  - npm test
