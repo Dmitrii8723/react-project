@@ -1,8 +1,14 @@
 kind: pipeline
 name: default
 
-steps:
+trigger:
+  event:
+  - push
+  branch:
+  - master
   
+steps:
+
 - name: frontend
   image: react-simple
   commands:
