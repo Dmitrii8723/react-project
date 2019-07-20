@@ -6,9 +6,8 @@ trigger:
   - push
   branch:
   - master
-  
-steps:
 
+steps:
 - name: frontend
   image: react-simple
   commands:
