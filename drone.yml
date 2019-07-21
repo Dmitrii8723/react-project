@@ -8,7 +8,6 @@ trigger:
   - master
 
 steps:
-  
 - name: frontend
   image: react-simple
   commands:
