@@ -1,5 +1,5 @@
 kind: pipeline
-name: api
+name: default
 
 trigger:
   event:
@@ -11,6 +11,7 @@ pipeline:
   docker-build:
     image: plugins/docker
     repo: dimakharapaev/new
+    registry: registry.hub.docker.io
     tags: tag
     Dockerfile: react-project/Dockerfile
     username: dimakharapaev
