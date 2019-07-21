@@ -14,4 +14,5 @@ steps:
     username: dimakharapaev@gmail.com
     password: Dasha@19882
     repo: dimakharapaev/new
+    Dockerfile: REACT-PROJECT/Dockerfile
     tags: latest
