@@ -1,15 +1,6 @@
-kind: pipeline
-name: default
+  pipeline:
 
-trigger:
-  event:
-  - push
-  branch:
-  - master
-
-steps:
-- name: frontend
-  image: react-simple
-  commands:
-  - npm install
-  - npm test
+  frontend:
+    image: react-simple
+    commands:
+      - npm install
