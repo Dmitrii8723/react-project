@@ -9,8 +9,6 @@ trigger:
   event:
   - push
   branch:
-  - enoah
-  - uat
   - master
 
 steps:
@@ -21,5 +19,8 @@ steps:
     repo: dimakharapaev/new
     tags:
       - latest
+    insecure: true
     context: api
     Dockerfile: REACT-PROJECT/Dockerfile
+    when:
+      branch: master
