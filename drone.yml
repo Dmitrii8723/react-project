@@ -22,5 +22,6 @@ steps:
     insecure: true
     context: api
     Dockerfile: REACT-PROJECT/Dockerfile
+    command: docker build -t simple-react
     when:
       branch: master
