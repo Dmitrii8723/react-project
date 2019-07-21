@@ -1,5 +1,7 @@
-publish:
+pipeline:
+  docker-build:
     image: plugins/docker
+    dockerfile: Dockerfile
     repo: dimakharapaev/new
     username: dimakharapaev
     password: Dasha@19882
