@@ -15,4 +15,4 @@ steps:
     password: Dasha@19882
     repo: dimakharapaev/new
     Dockerfile: REACT-PROJECT/Dockerfile
-    tags: latest
+    command: docker push dimakharapaev/new:latest
