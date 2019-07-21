@@ -1,14 +1,11 @@
-publish:
-  docker:
-    # registry: quay.corp.zlab.co.jp
-    registry: cloud.docker.com/repository/docker/
-    username: $$DOCKER_USERNAME
+kind: pipeline
+name: default
+
+steps:
+- name: docker  
+  image: plugins/docker
+  settings:
+    username: dimakharapaev@gmail.com
     password: Dasha@19882
-    email: dimakharapaev@gmail.com
-    #repo: zlab/docker-cfssl
     repo: dimakharapaev/new
-    tag: latest
-    insecure: true
-    storage_driver: overlay
-    when:
-      branch: master
+    tags: latest
