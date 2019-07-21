@@ -1,8 +1,18 @@
+kind: pipeline
+name: api
+
+trigger:
+  event:
+  - push
+  branch:
+  - master
+  
 pipeline:
   docker-build:
     image: plugins/docker
-    dockerfile: Dockerfile
     repo: dimakharapaev/new
+    tags: tag
+    Dockerfile: src/Dockerfile
     username: dimakharapaev
     password: Dasha@19882
     when:
