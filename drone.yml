@@ -1,17 +1,7 @@
-kind: pipeline
-name: api
-
-trigger:
-  event:
-  - push
-  branch:
-  - master
-
-steps:
-- name: docker  
-  image: plugins/docker
-  settings:
+publish:
+    image: plugins/docker
+    repo: dimakharapaev/new
     username: dimakharapaev
     password: Dasha@19882
-    repo: dimakharapaev/new
-    dockerfile: REACT-PROJECT/Dockerfile
+    when:
+      branch: master
