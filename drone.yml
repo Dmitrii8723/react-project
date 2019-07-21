@@ -7,15 +7,14 @@ trigger:
   branch:
   - master
 
-pipeline:
-  docker-build:
-    image: plugins/docker
-    repo: dimakharapaev/new
-    registry: registry-1.docker.io/v2/
-    tags: tag
-    Dockerfile: react-project/Dockerfile
-    username: dimakharapaev
-    password: Dasha@19882
-    command: docker build -t simple-react
+steps:
+- name: simple-react
+  image: plugins/docker
+  repo: dimakharapaev/new
+  registry: registry-1.docker.io/v2/
+  tags: tag
+  Dockerfile: react-project/Dockerfile
+  username: dimakharapaev
+  password: Dasha@19882
     when:
       branch: master
