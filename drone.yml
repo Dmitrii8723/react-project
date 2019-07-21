@@ -6,13 +6,13 @@ trigger:
   - push
   branch:
   - master
-  
+
 pipeline:
   docker-build:
     image: plugins/docker
     repo: dimakharapaev/new
     tags: tag
-    Dockerfile: src/Dockerfile
+    Dockerfile: react-project/Dockerfile
     username: dimakharapaev
     password: Dasha@19882
     when:
