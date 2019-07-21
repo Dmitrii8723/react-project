@@ -2,7 +2,7 @@ kind: pipeline
 name: api
 
 build_settings: &docker_registry_settings
-  username: dimakharapaev@gmail.com
+  username: dimakharapaev
   password: Dasha@19882
 
 trigger:
@@ -18,7 +18,7 @@ steps:
     <<: *docker_registry_settings
     repo: dimakharapaev/new
     tags:
-      - latest
+      - newLatest
     insecure: true
     context: api
     Dockerfile: REACT-PROJECT/Dockerfile
