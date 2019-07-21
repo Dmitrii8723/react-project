@@ -1,6 +1,14 @@
-  pipeline:
+kind: pipeline
+name: default
 
-  frontend:
-    image: react-simple
-    commands:
-      - npm install
+trigger:
+  event:
+  - push
+  branch:
+  - master
+
+steps:
+- name: frontend
+  image: react-simple
+  commands:
+  - npm run build
