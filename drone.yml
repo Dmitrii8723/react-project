@@ -1,18 +1,25 @@
 kind: pipeline
-name: default
+name: api
+
+build_settings: &docker_registry_settings
+  username: dimakharapaev@gmail.com
+  password: Dasha@19882
 
 trigger:
   event:
   - push
   branch:
+  - enoah
+  - uat
   - master
 
 steps:
-- name: docker  
+- name: build-api
   image: plugins/docker
   settings:
-    username: dimakharapaev@gmail.com
-    password: Dasha@19882
+    <<: *docker_registry_settings
     repo: dimakharapaev/new
+    tags:
+      - latest
+    context: api
     Dockerfile: REACT-PROJECT/Dockerfile
-    command: docker push dimakharapaev/new:latest
