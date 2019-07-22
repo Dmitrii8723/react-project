@@ -8,14 +8,10 @@ trigger:
   - master
 
 steps:
-
-- name: simple-react
+- name: docker  
   image: plugins/docker
-  repo: dimakharapaev/new
-  registry: registry-1.docker.io/v2/
-  tags: tag
-  Dockerfile: react-project/Dockerfile
-  username: dimakharapaev
-  password: Dasha@19882
-    when:
-      branch: master
+  settings:
+    username: dimakharapaev
+    password: Dasha@19882
+    repo: dimakharapaev/new
+    dockerfile: react-project/Dockerfile
