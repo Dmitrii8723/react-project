@@ -8,6 +8,7 @@ trigger:
   - master
 
 steps:
+
 - name: simple-react
   image: plugins/docker
   repo: dimakharapaev/new
