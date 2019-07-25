@@ -8,6 +8,7 @@ trigger:
   - master
 
 steps:
+
 - name: docker  
   image: plugins/docker
   settings:
