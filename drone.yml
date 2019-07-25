@@ -1,18 +1,11 @@
 kind: pipeline
 name: default
 
-trigger:
-  event:
-  - push
-  branch:
-  - master
-
 steps:
-
 - name: docker  
   image: plugins/docker
   settings:
     username: dimakharapaev
     password: Dasha@19882
     repo: dimakharapaev/new
-    dockerfile: react-project/Dockerfile
+    tags: latest2
