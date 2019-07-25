@@ -16,4 +16,4 @@ steps:
     password: Dasha@19882
     repo: dimakharapaev/new
     insecure: true
-    tags: latest2
+    auto_tag: true
